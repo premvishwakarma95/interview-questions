@@ -221,7 +221,7 @@ JSX allows writing **HTML-like syntax in JavaScript**.
 ---
 
 ## 2️⃣2️⃣ What is Babel?
-**Babel** converts modern JavaScript into browser-compatible JavaScript.
+**Babel** converts modern JavaScript into browser-compatible JavaScript OR converts ES6 JS into old JS is called babel or also we call it reactjs compiler.
 
 ---
 
