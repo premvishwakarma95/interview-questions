@@ -168,6 +168,15 @@ app.use((req, res, next) => next());
 
 ## 1️⃣5️⃣ What is Reconciliation & Diffing in React?
 React compares **Virtual DOM changes** and updates only required parts of the real DOM.
+**Reconciliation** is the process React uses to **update the UI efficiently** when state or props change.
+
+Instead of updating the entire DOM, React:
+- Creates a **new Virtual DOM**
+- Compares it with the **previous Virtual DOM**
+- Updates only the **changed parts** in the Real DOM
+
+### 🔍 Diffing
+**Diffing** is the algorithm React uses during reconciliation to **find differences** between the old and new Virtual DOM trees.
 
 ---
 
