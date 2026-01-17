@@ -136,6 +136,16 @@ function sum(...nums) {
 Debouncing limits function execution until a delay passes.
 
 ```js
+// In ReeactJS
+useEffect(() => {
+    const timer = setTimeout(() => {
+      setDebouncedQuery(query);
+    }, 500); // delay in ms
+
+    return () => clearTimeout(timer);
+  }, [query]);
+
+// In JS
 function debounce(fn, delay) {
   let timer;
   return (...args) => {
