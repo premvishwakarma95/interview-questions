@@ -183,7 +183,7 @@ Instead of updating the entire DOM, React:
 ---
 
 ## 1️⃣6️⃣ Virtual DOM vs Real DOM
-- Virtual DOM → lightweight JavaScript object
+- Virtual DOM → lightweight JavaScript object OR lightwight copy of real dom
 - Real DOM → actual browser DOM
 
 ---
