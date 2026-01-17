@@ -36,7 +36,7 @@ function outer() {
 ---
 
 ## 3️⃣ What is the Event Loop in Node.js?
-The **event loop** allows Node.js to handle **non-blocking asynchronous operations** using the call stack, callback queue, and microtask queue.
+The **event loop** allows Node.js to handle **non-blocking asynchronous operations** using the call stack, callback queue, and microtask queue and all time check call stack if it is empty then take process from callback and put it in stack and execute it is called event loop.
 
 ```js
 console.log("A");
