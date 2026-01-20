@@ -401,9 +401,9 @@ sharding algorithm make copies of primary db, if primary db gets crashed then ma
 
 ## What is sharding in mongodb?
 This splits our db in multiple db this doesn’t store copy it store different data for example. It makes application faster.
--A DB - 1 to 1000 records
--B DB - 1001 to 2000 records
--C DB - 2001 to 3000 records 
+- A DB - 1 to 1000 records
+- B DB - 1001 to 2000 records
+- C DB - 2001 to 3000 records 
 
 ---
 
@@ -422,7 +422,7 @@ This defines where the crawling routes exist in the project.
 
 ### What is buffer in nodejs?
 In Node.js, a Buffer is a built-in object used to handle raw binary data directly in memory.
--Buffer = temporary memory space used to store and work with binary data.
+- Buffer = temporary memory space used to store and work with binary data.
 
 
 
