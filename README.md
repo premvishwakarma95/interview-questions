@@ -384,8 +384,8 @@ Architecture where applications are split into **small independent services**.
 ---
 
 ## What is Apache and it's role?
-Apache is an open-source web server that handles client HTTP/HTTPS requests and serves web content such as HTML pages, images, and dynamic applications.
-Its role is to receive requests from browsers, process them (or forward them to backend logic like PHP), and return the appropriate response to the client.
+- Apache is an open-source web server that handles client HTTP/HTTPS requests and serves web content such as HTML pages, images, and dynamic applications.
+- Its role is to receive requests from browsers, process them (or forward them to backend logic like PHP), and return the appropriate response to the client.
 
 ---
 
