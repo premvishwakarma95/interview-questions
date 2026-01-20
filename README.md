@@ -383,4 +383,47 @@ Architecture where applications are split into **small independent services**.
 
 ---
 
+## What is Apache and it's role?
+Apache is an open-source web server that handles client HTTP/HTTPS requests and serves web content such as HTML pages, images, and dynamic applications.
+Its role is to receive requests from browsers, process them (or forward them to backend logic like PHP), and return the appropriate response to the client.
+
+---
+
+## What is Nginx?
+NGINX is a web server and reverse proxy. I mean nginx helps to interact and make connection from client to actual application port means our ec2 http port is 80 and nodejs port is 3000 so if user hits browser then first go to 80 and then 3000 then response so all this thing handles nginx.
+
+---
+
+## What is replica in mongodb?
+sharding algorithm make copies of primary db, if primary db gets crashed then make primary to as secondary copy db so our nodejs app will never get crashed.
+
+---
+
+## What is sharding in mongodb?
+This splits our db in multiple db this doesn’t store copy it store different data for example. It makes application faster.
+-A DB - 1 to 1000 records
+-B DB - 1001 to 2000 records
+-C DB - 2001 to 3000 records 
+
+---
+
+## What is Indexing in mongodb?
+Indexing in mongodb is an amazing thing it makes application or query optimized and faster if we create indexing in anything then i will not seach all the document directly go to that document and fetch it that’s the power of indexing. By default indexing is added in _id in mongodb.
+
+---
+
+## what is robot.txt file?
+we describe in this what we are allowing or what not to craw in google.
+
+---
+
+what is sitemap.xml?
+This defines where the crawling routes exist in the project.
+
+### What is buffer in nodejs?
+In Node.js, a Buffer is a built-in object used to handle raw binary data directly in memory.
+-Buffer = temporary memory space used to store and work with binary data.
+
+
+
 
