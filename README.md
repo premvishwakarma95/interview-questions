@@ -424,6 +424,10 @@ This defines where the crawling routes exist in the project.
 In Node.js, a Buffer is a built-in object used to handle raw binary data directly in memory.
 - Buffer = temporary memory space used to store and work with binary data.
 
+---
+
+### Why do we use mongodb and why is this different and benefecial than other?
+Mongodb is more powerful because in this we aggregate to filter data we can filteer data easily in this and can do query fast have indexing power that makes query faster and also we have and it is flexible we can store anything we want because it's flexible but in SQL we need to define everything but mongodb is nosql and it is flexible like we know in some fileds we don't need to store field or in some we can.
 
 
 
