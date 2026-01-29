@@ -510,7 +510,7 @@ React → Express → MongoDB → Express → React
 - Yes we can get body in GET http method req.body.
 ```js
 app.get("/get-data", (req, res) => {
-    console.log(req.body);
+    console.log(req.body);  // Here we will get body data and can access body data if we will pass
     res.send("Welcome to the Todo API!");
 });
 ```
