@@ -493,6 +493,8 @@ console.log(jsonData);
 Deserialization
 - Converting serialized data back into its original object form that we understand i mean we work with example json to object
 ```js
+app.use(express.json()); // this is deserialization
+
 const response = '{"name":"Prem","age":26,"role":"Developer"}';
 
 // Deserialize
@@ -501,5 +503,6 @@ const userObj = JSON.parse(response);
 console.log(userObj.name); // Prem
 ```
 React → Express → MongoDB → Express → React
+
 
 ---
