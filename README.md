@@ -470,3 +470,36 @@ const Dashboard = React.lazy(() => import("./Dashboard"));
 </Suspense>
 ```
 
+---
+
+### Serialization & Deserialization in MERN Flow?
+Serialization
+- Converting data (object) into a format that can be stored or sent over the network, i mean in format that machine understand in the network or server example object to json.
+```js
+const user = {
+  name: "Prem",
+  age: 26,
+  role: "Developer"
+};
+
+// Serialize
+const jsonData = JSON.stringify(user);
+
+console.log(jsonData);
+// {"name":"Prem","age":26,"role":"Developer"}
+
+```
+
+Deserialization
+- Converting serialized data back into its original object form that we understand i mean we work with example json to object
+```js
+const response = '{"name":"Prem","age":26,"role":"Developer"}';
+
+// Deserialize
+const userObj = JSON.parse(response);
+
+console.log(userObj.name); // Prem
+```
+React → Express → MongoDB → Express → React
+
+---
