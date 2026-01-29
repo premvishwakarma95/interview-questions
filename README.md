@@ -504,5 +504,13 @@ console.log(userObj.name); // Prem
 ```
 React → Express → MongoDB → Express → React
 
-
 ---
+
+### Can we pass data in body in GET http method?
+- Yes we can get body in GET http method req.body.
+```js
+app.get("/get-data", (req, res) => {
+    console.log(req.body);
+    res.send("Welcome to the Todo API!");
+});
+```
