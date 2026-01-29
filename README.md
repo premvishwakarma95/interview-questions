@@ -431,3 +431,42 @@ Mongodb is more powerful because in this we aggregate to filter data we can filt
 
 ---
 
+### Explain useMemo, useCallback, React.memo and lazy loading?
+React.memo ->
+- Memoizes a component
+- Re-renders only if props change
+```js
+const Child = React.memo(({ count }) => {
+  console.log("Child rendered");
+  return <h2>Count: {count}</h2>;
+});
+```
+ 
+useCallback -> 
+- Functions are recreated on every render, causing child re-renders.
+```js
+const handleClick = useCallback(() => {
+  setCount((c) => c + 1);
+}, []);
+```
+ 
+useMemo ->
+- Caches expensive calculation result
+- Runs only when dependencies change
+```js
+const expensiveValue = useMemo(() => {
+  console.log("Calculating...");
+  return slowFunction(count);
+}, [count]);
+``` 
+
+Lazy loading ->
+```js
+import { Suspense } from "react";
+const Dashboard = React.lazy(() => import("./Dashboard"));
+ 
+<Suspense fallback={<div>Loading...</div>}>
+  <Dashboard />
+</Suspense>
+```
+
