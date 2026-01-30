@@ -141,8 +141,9 @@ useEffect(() => {
     const timer = setTimeout(() => {
       setDebouncedQuery(query);
     }, 500); // delay in ms
-
-    return () => clearTimeout(timer);
+    
+    // this return code will only run when code get rerender when query value change then first return code will be executed then above code on second rerender
+    return () => clearTimeout(timer);   
   }, [query]);
 
 // In JS
