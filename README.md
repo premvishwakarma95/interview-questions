@@ -147,12 +147,33 @@ useEffect(() => {
 
 // In JS
 function debounce(fn, delay) {
-  let timer;
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn(...args), delay);
+  let timerId;
+
+  return function (...args) {
+    const context = this;
+
+    clearTimeout(timerId);
+
+    timerId = setTimeout(() => {
+      fn.apply(context, args);
+    }, delay);
   };
 }
+
+function searchAPI(query) {
+  console.log("API call for:", query);
+}
+
+const debouncedSearch = debounce(searchAPI, 500);
+
+// simulate typing
+debouncedSearch("R");
+debouncedSearch("Re");
+debouncedSearch("Rea");
+debouncedSearch("Reac");
+debouncedSearch("React");
+
+// Output of this js code -> React
 ```
 
 ---
