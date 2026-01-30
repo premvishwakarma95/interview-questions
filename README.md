@@ -383,23 +383,23 @@ Architecture where applications are split into **small independent services**.
 
 ---
 
-## What is Apache and it's role?
+## 1 What is Apache and it's role?
 - Apache is an open-source web server that handles client HTTP/HTTPS requests and serves web content such as HTML pages, images, and dynamic applications.
 - Its role is to receive requests from browsers, process them (or forward them to backend logic like PHP), and return the appropriate response to the client.
 
 ---
 
-## What is Nginx?
+## 2 What is Nginx?
 NGINX is a web server and reverse proxy. I mean nginx helps to interact and make connection from client to actual application port means our ec2 http port is 80 and nodejs port is 3000 so if user hits browser then first go to 80 and then 3000 then response so all this thing handles nginx.
 
 ---
 
-## What is replica in mongodb?
+## 3 What is replica in mongodb?
 sharding algorithm make copies of primary db, if primary db gets crashed then make primary to as secondary copy db so our nodejs app will never get crashed.
 
 ---
 
-## What is sharding in mongodb?
+## 4 What is sharding in mongodb?
 This splits our db in multiple db this doesn’t store copy it store different data for example. It makes application faster.
 - A DB - 1 to 1000 records
 - B DB - 1001 to 2000 records
@@ -407,31 +407,31 @@ This splits our db in multiple db this doesn’t store copy it store different d
 
 ---
 
-## What is Indexing in mongodb?
+## 5 What is Indexing in mongodb?
 Indexing in mongodb is an amazing thing it makes application or query optimized and faster if we create indexing in anything then i will not seach all the document directly go to that document and fetch it that’s the power of indexing. By default indexing is added in _id in mongodb.
 
 ---
 
-## what is robot.txt file?
+### 6 what is robot.txt file?
 we describe in this what we are allowing or what not to craw in google.
 
 ---
 
-what is sitemap.xml?
+### 7 what is sitemap.xml?
 This defines where the crawling routes exist in the project.
 
-### What is buffer in nodejs?
+### 8 What is buffer in nodejs?
 In Node.js, a Buffer is a built-in object used to handle raw binary data directly in memory.
 - Buffer = temporary memory space used to store and work with binary data.
 
 ---
 
-### Why do we use mongodb and why is this different and benefecial than other?
+### 9 Why do we use mongodb and why is this different and benefecial than other?
 Mongodb is more powerful because in this we aggregate to filter data we can filteer data easily in this and can do query fast have indexing power that makes query faster and also we have and it is flexible we can store anything we want because it's flexible but in SQL we need to define everything but mongodb is nosql and it is flexible like we know in some fileds we don't need to store field or in some we can.
 
 ---
 
-### Explain useMemo, useCallback, React.memo and lazy loading?
+### 10 Explain useMemo, useCallback, React.memo and lazy loading?
 React.memo ->
 - Memoizes a component
 - Re-renders only if props change
@@ -472,7 +472,7 @@ const Dashboard = React.lazy(() => import("./Dashboard"));
 
 ---
 
-### Serialization & Deserialization in MERN Flow?
+### 11 Serialization & Deserialization in MERN Flow?
 Serialization
 - Converting data (object) into a format that can be stored or sent over the network, i mean in format that machine understand in the network or server example object to json.
 ```js
@@ -506,7 +506,7 @@ React → Express → MongoDB → Express → React
 
 ---
 
-### Can we pass data in body in GET http method?
+### 12 Can we pass data in body in GET http method?
 - Yes we can get body in GET http method req.body.
 ```js
 app.get("/get-data", (req, res) => {
@@ -514,3 +514,41 @@ app.get("/get-data", (req, res) => {
     res.send("Welcome to the Todo API!");
 });
 ```
+
+---
+
+### 13 Why don't we use more one parent in jsx in reactjs i mean to say please check in below code?
+```js
+// this code gives error
+function App() {
+  return (
+    <h1>Hello</h1>
+    <p>World</p>
+  );
+}
+
+// After babel conversion
+return (
+  React.createElement("h1", null, "Hello"),
+  React.createElement("p", null, "World")
+);
+
+```
+output: 
+- So babel converts it into like this and we know function cannot return two values that's why we get error.
+```js
+<>
+  <h1>Hello</h1>
+  <p>World</p>
+</>
+
+// converted into this
+React.createElement(
+  React.Fragment,
+  null,
+  React.createElement("h1", null, "Hello"),
+  React.createElement("p", null, "World")
+);
+
+```
+- And when we use empty fragments then it convert into like above code
