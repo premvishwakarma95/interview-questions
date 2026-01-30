@@ -147,7 +147,7 @@ useEffect(() => {
     return () => clearTimeout(timer);   
   }, [query]);
 
-// In JS
+// In JS, ( this js code is best example of closure concept as we can see timerId variable value needs to remember in return function. this variable is in lexial state.
 function debounce(fn, delay) {
   let timerId;
 
