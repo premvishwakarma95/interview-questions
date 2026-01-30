@@ -552,3 +552,12 @@ React.createElement(
 
 ```
 - And when we use empty fragments then it convert into like above code
+
+---
+
+### 14 What Temporal dead zone (TDC)?
+- Temporal Dead Zone (TDZ) is the time between entering a scope and initializing a variable, where accessing that variable causes a ReferenceError.
+```js
+console.log(a); // ❌ ReferenceError So here this area is TDC for variable a and it's only for const and let variable because they are block scoped
+let a = 10;
+```
