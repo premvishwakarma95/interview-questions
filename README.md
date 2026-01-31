@@ -687,3 +687,23 @@ export default function App() {
 - ProtectedDashboard → Enhanced component
 - withAuth(Dashboard) → HOC pattern
 - 👉 The HOC adds authentication logic without modifying Dashboard.
+
+---
+
+## 16 If we have million data list how do we manage it in reactjs?
+### Use virtualization
+- react-window
+- react-virtualized
+```js
+import { FixedSizeList } from "react-window";
+
+<FixedSizeList
+  height={400}        // height of the container
+  itemCount={10000}   // number of items
+  itemSize={35}      // height of each row
+  width={"100%"}    // width of the list
+>
+  {Row}
+</FixedSizeList>
+```
+Output:- This renders only visible items
