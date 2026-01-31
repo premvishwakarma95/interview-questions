@@ -584,3 +584,60 @@ React.createElement(
 console.log(a); // ❌ ReferenceError So here this area is TDC for variable a and it's only for const and let variable because they are block scoped
 let a = 10;
 ```
+
+---
+
+### 15 Explain Higher order component?
+- A Higher-Order Component is a function that takes a component and returns a new component with additional functionality.
+```js
+import React from "react";
+
+/* ================================
+   Higher Order Component (HOC)
+================================ */
+function withAuth(WrappedComponent) {
+  return function AuthComponent(props) {
+    const isLoggedIn = true; // change to false to test
+
+    if (!isLoggedIn) {
+      return <h2 style={{ color: "red" }}>Please login first</h2>;
+    }
+
+    return <WrappedComponent {...props} />;
+  };
+}
+
+/* ================================
+   Normal Component
+================================ */
+function Dashboard({ user }) {
+  return (
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome, {user}</p>
+    </div>
+  );
+}
+
+/* ================================
+   Enhanced Component using HOC
+================================ */
+const ProtectedDashboard = withAuth(Dashboard);
+
+/* ================================
+   App Component
+================================ */
+export default function App() {
+  return (
+    <div style={{ padding: "20px" }}>
+      <ProtectedDashboard user="Prem" />
+    </div>
+  );
+}
+```
+- What’s Happening (Quick Explanation)
+- withAuth → Higher-Order Component
+- Dashboard → Original component
+- ProtectedDashboard → Enhanced component
+- withAuth(Dashboard) → HOC pattern
+- 👉 The HOC adds authentication logic without modifying Dashboard.
