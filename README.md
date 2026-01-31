@@ -695,15 +695,75 @@ export default function App() {
 - react-window
 - react-virtualized
 ```js
-import { FixedSizeList } from "react-window";
+import React from "react";
+import { FixedSizeList as List } from "react-window";
 
-<FixedSizeList
-  height={400}        // height of the container
-  itemCount={10000}   // number of items
-  itemSize={35}      // height of each row
-  width={"100%"}    // width of the list
->
-  {Row}
-</FixedSizeList>
+// Sample data: 10,000 items
+const data = Array.from({ length: 10000 }, (_, index) => ({
+  id: index + 1,
+  name: `Item ${index + 1}`,
+}));
+
+// Row component
+const Row = ({ index, style }) => {
+  const item = data[index];
+  return (
+    <div
+      style={{
+        ...style,
+        display: "flex",
+        alignItems: "center",
+        padding: "0 10px",
+        borderBottom: "1px solid #eee",
+        backgroundColor: index % 2 === 0 ? "#f9f9f9" : "#fff",
+      }}
+    >
+      <span>{item.id}.</span>&nbsp;
+      <span>{item.name}</span>
+    </div>
+  );
+};
+
+// Main List component
+const VirtualizedList = () => {
+  return (
+    <div style={{ margin: "20px" }}>
+      <h2>Virtualized List of 10,000 Items</h2>
+      <List
+        height={400}       // height of the container
+        itemCount={data.length} // number of items
+        itemSize={35}      // height of each row
+        width={"100%"}     // width of the list
+      >
+        {Row}
+      </List>
+    </div>
+  );
+};
+export default VirtualizedList;
+
+---
+
+// Another solution
+import React from "react";
+import { List } from "react-virtualized";
+const data = Array.from({ length: 10000 }, (_, i) => `Item ${i + 1}`);
+const rowRenderer = ({ index, key, style }) => (
+  <div key={key} style={style}>
+    {data[index]}
+  </div>
+);
+export default function VirtualizedList() {
+  return (
+    <List
+      width={300}          // list width
+      height={400}         // viewport height
+      rowCount={data.length} // number of rows
+      rowHeight={30}       // height of each row
+      rowRenderer={rowRenderer} // render function
+    />
+  );
+}
+
 ```
 Output:- This renders only visible items
