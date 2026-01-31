@@ -491,6 +491,52 @@ const Dashboard = React.lazy(() => import("./Dashboard"));
 <Suspense fallback={<div>Loading...</div>}>
   <Dashboard />
 </Suspense>
+
+# 📦 Important clarification: "load" vs "bundle" in React
+# ---------------------------------------
+# Case 1: Normal import (NO lazy loading)
+# ---------------------------------------
+
+import Login from "./Login";
+import About from "./About";
+import Contact from "./Contact";
+
+# ✔ All component files are bundled and downloaded at build time
+# ✔ Browser receives Login, About, and Contact JS together
+# ❌ Only the Login component is rendered (based on route)
+# ❌ About and Contact are NOT mounted or executed
+
+# 👉 Impact:
+# - Larger initial bundle size
+# - Slower first page load
+# - No UI difference (only route component renders)
+
+# ---------------------------------------
+# Case 2: Lazy loading (Best Practice 🚀)
+# ---------------------------------------
+
+const Login = React.lazy(() => import("./Login"));
+const About = React.lazy(() => import("./About"));
+const Contact = React.lazy(() => import("./Contact"));
+
+# ✔ Only Login JS is downloaded on initial load
+# ✔ About and Contact are split into separate chunks
+# ✔ They load ONLY when the user visits those routes
+
+# 👉 Impact:
+# - Smaller initial bundle size
+# - Faster first load
+# - Better performance and scalability
+
+# ---------------------------------------
+# Summary
+# ---------------------------------------
+
+# Normal Import  → All JS downloaded, only one page rendered
+# Lazy Loading   → Only required JS downloaded per route
+
+# Recommended: Use React.lazy() for route-based components
+
 ```
 
 ---
