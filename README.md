@@ -2,6 +2,10 @@
 
 ---
 
+## React Optimization steps
+- learn from below repo of mine
+- https://github.com/premvishwakarma95/react-optimization-steps
+
 ## 1️⃣ What is Hoisting in JavaScript?
 **Hoisting** is JavaScript’s behavior of moving **declarations** to the top of their scope before code execution OR when varibles and functions get hoisted at the top of their scope is called hoisting.
 
