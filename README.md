@@ -771,3 +771,40 @@ export default function VirtualizedList() {
 
 ```
 Output:- This renders only visible items
+
+---
+
+## 17 Difference between microtask and macrotask in javascript event loop?
+In JavaScript, microtasks and macrotasks are two different queues used by the event loop. Microtasks run first (Promise callbacks), macrotasks run later (timers like setTimeout / setInterval).
+```js
+console.log("A");
+
+setTimeout(() => {
+  console.log("B");
+}, 0);
+
+console.log("C");
+```
+Output:-
+```css
+A
+C
+B
+```
+```js
+console.log("A");
+
+Promise.resolve().then(() => {
+  console.log("B");
+});
+
+console.log("C");
+```
+output:-
+```css
+A
+C
+B
+```
+
+---
