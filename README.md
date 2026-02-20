@@ -253,7 +253,7 @@ JSX allows writing **HTML-like syntax in JavaScript**.
 ---
 
 ## 2️⃣3️⃣ What is SWC in Next.js?
-**SWC** is a fast Rust-based compiler used by Next.js.
+**SWC** is a fast Rust-based compiler used by Next.js. it stands for Speedy Web Compiler.
 
 ---
 
