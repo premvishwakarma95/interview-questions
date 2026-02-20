@@ -808,3 +808,17 @@ B
 ```
 
 ---
+
+## 18 What is Node.js, and how is it different from a browser's runtime environment?
+Node.js is a server-side JavaScript runtime environment that allows you to execute code outside of a web browser. While a browser's runtime is for front-end web development, Node.js is for building back-end services, command-line tools, and network applications.
+
+---
+
+## 19 Explain the purpose of the JavaScript engine (V8) in Node.js.
+The V8 JavaScript engine compiles JavaScript code into machine code, allowing Node.js to execute it very quickly. It's the same engine used in Chrome, which is why Node.js is so fast.
+
+---
+
+## 20 How would you debug a Node.js application?
+I use vs code debugger or Chatgpt i mean ai or chorme dev tool. It depends on error then i think what should i do but now a days i mostly use AI to debug because we need to deliver work fastly so we need to be upgraded according to time.
+
