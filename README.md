@@ -569,7 +569,7 @@ console.log(jsonData);
 ```
 
 Deserialization
-- Converting serialized data back into its original object form that we understand i mean we work with example json to object
+- Converting serialized data back into its original object form that we understand i mean we work with example json to object.
 ```js
 app.use(express.json()); // this is deserialization
 
