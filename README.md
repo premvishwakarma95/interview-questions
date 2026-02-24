@@ -926,3 +926,5 @@ app.use(globalErrorHandler);
 - Role based access control (authorization).
 - Rate limiting (only response in this time and only user can do 100 request per second).
 - Add cors strategy and secure header.
+
+---
