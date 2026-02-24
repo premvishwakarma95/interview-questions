@@ -827,6 +827,8 @@ The V8 JavaScript engine compiles JavaScript code into machine code, allowing No
 ## 20 How would you debug a Node.js application?
 I use vs code debugger or Chatgpt i mean ai or chorme dev tool. It depends on error then i think what should i do but now a days i mostly use AI to debug because we need to deliver work fastly so we need to be upgraded according to time.
 
+---
+
 ## 21 What difference between Horizontal and Vertical scaling?
 1️⃣ Vertical Scaling (Scale UP ⬆️)
 You increase the power of a single server.
@@ -857,4 +859,62 @@ You add more servers instead of making one bigger.
 - Load balancer (Nginx / ALB)
 - AWS Auto Scaling Group
 
+---
 
+## 22 How do you do error handling in nodejs?
+In Node.js, I handle errors using a centralized error-handling approach.
+I use try–catch for synchronous and async/await code, create custom error classes, pass errors using next(error) in Express, and handle them in a global error middleware.
+I also handle unhandled promise rejections, validate inputs, and log errors properly without crashing the server.
+✅ Step 1: Custom Error Class
+```js
+class AppError extends Error {
+  constructor(message, statusCode) {
+    super(message);
+    this.statusCode = statusCode;
+    this.status = `${statusCode}`.startsWith('4') ? 'fail' : 'error';
+  }
+}
+
+module.exports = AppError;
+```
+✅ Step 2: Async Wrapper (Avoid repeating try–catch)
+```js
+const catchAsync = fn => {
+  return (req, res, next) => {
+    Promise.resolve(fn(req, res, next)).catch(next);
+  };
+};
+
+module.exports = catchAsync;
+```
+✅ Step 3: Use in Controller
+```js
+const catchAsync = require('./catchAsync');
+const AppError = require('./appError');
+
+exports.getUser = catchAsync(async (req, res, next) => {
+  const user = await User.findById(req.params.id);
+
+  if (!user) {
+    return next(new AppError('User not found', 404));
+  }
+
+  res.status(200).json({ user });
+});
+```
+✅ Step 4: Global Error Middleware (MOST IMPORTANT)
+```js
+module.exports = (err, req, res, next) => {
+  err.statusCode = err.statusCode || 500;
+  err.status = err.status || 'error';
+
+  res.status(err.statusCode).json({
+    status: err.status,
+    message: err.message
+  });
+};
+```
+Use this in app.js
+```js
+app.use(globalErrorHandler);
+```
