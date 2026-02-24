@@ -918,3 +918,11 @@ Use this in app.js
 ```js
 app.use(globalErrorHandler);
 ```
+
+---
+
+## 23 How would you secure you NodeJS application?
+- Use JWT access and refresh token (Authentication).
+- Role based access control (authorization).
+- Rate limiting (only response in this time and only user can do 100 request per second).
+- Add cors strategy and secure header.
