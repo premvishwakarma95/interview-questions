@@ -827,3 +827,34 @@ The V8 JavaScript engine compiles JavaScript code into machine code, allowing No
 ## 20 How would you debug a Node.js application?
 I use vs code debugger or Chatgpt i mean ai or chorme dev tool. It depends on error then i think what should i do but now a days i mostly use AI to debug because we need to deliver work fastly so we need to be upgraded according to time.
 
+## 21 What difference between Horizontal and Vertical scaling?
+1️⃣ Vertical Scaling (Scale UP ⬆️)
+You increase the power of a single server.
+- More CPU
+- More RAM
+- More Disk
+Same server → stronger server.
+🧠 Example
+You have:
+```code
+1 server
+2 CPU
+4 GB RAM
+```
+Traffic increases ➝ you upgrade to:
+```code
+1 server
+8 CPU
+32 GB RAM
+```
+✅ Same machine
+
+2️⃣ Horizontal Scaling (Scale OUT ➡️)
+You add more servers instead of making one bigger.
+- Multiple servers
+- Load balancer distributes traffic
+🔧 Real-world Example
+- Load balancer (Nginx / ALB)
+- AWS Auto Scaling Group
+
+
