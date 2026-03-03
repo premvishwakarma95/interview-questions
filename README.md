@@ -928,3 +928,44 @@ app.use(globalErrorHandler);
 - Add cors strategy and secure header.
 
 ---
+
+## 24 Pure vs Impure function in JS.
+
+### Pure function
+A pure function:
+- Always returns the same output for the same input
+- Does not change anything outside its scope (no side effects)
+```js
+function add(a, b) {
+  return a + b;
+}
+
+add(2, 3); // 5
+add(2, 3); // 5 (always the same)
+```
+
+### Impure Function
+An impure function:
+- May return different results for the same input
+- Has side effects
+```js
+let count = 0;
+
+function increment() {
+  count++;
+  return count;
+}
+```
+🔁 Pure vs Impure (Side-by-Side)
+
+| Feature                  | Pure Function | Impure Function  |
+| ------------------------ | ------------- | ---------------- |
+| Same input → same output | ✅ Yes         | ❌ Not guaranteed |
+| Side effects             | ❌ No          | ✅ Yes            |
+| Modifies external state  | ❌ No          | ✅ Yes            |
+| Easy testing             | ✅ Very easy   | ❌ Hard           |
+| Predictable              | ✅ Yes         | ❌ No             |
+
+
+---
+
