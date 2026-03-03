@@ -955,6 +955,11 @@ function increment() {
   count++;
   return count;
 }
+
+// Second function
+function getCurrentTime() {
+  return new Date().toLocaleTimeString();
+}
 ```
 🔁 Pure vs Impure (Side-by-Side)
 
