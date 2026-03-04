@@ -949,6 +949,7 @@ An impure function:
 - May return different results for the same input
 - Has side effects
 ```js
+// first example function
 let count = 0;
 
 function increment() {
