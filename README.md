@@ -991,3 +991,12 @@ document.getElementById("btn").addEventListener("click", function () {
 </script>
 ```
 
+---
+
+## 26 Why do we get 304 status in network tab in frontend if backend return response with 200?
+- If we will remove strict mode from react then it will give 200 status.
+- We get 304 Not Modified because of HTTP caching.
+- The browser asked the server “Has this data changed?”
+- The server replied “No, it’s the same as before.”
+- So the browser uses the cached response instead of downloading it again.
+
