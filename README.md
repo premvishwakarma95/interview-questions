@@ -976,3 +976,18 @@ function getCurrentTime() {
 
 ---
 
+## 25 What is Vanilla Javascript?
+- JavaScript Vanilla JS means using pure JavaScript without any frameworks or libraries.
+- It is simply normal JavaScript provided by the browser.
+- Vanilla JS = Plain JavaScript without tools like React, Angular, or Vue.js.
+- Example
+```html
+<button id="btn">Click</button>
+
+<script>
+document.getElementById("btn").addEventListener("click", function () {
+  alert("Hello");
+});
+</script>
+```
+
