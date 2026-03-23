@@ -1001,3 +1001,7 @@ document.getElementById("btn").addEventListener("click", function () {
 - So the browser uses the cached response instead of downloading it again.
 
 ---
+
+## 27 Explain Browser caching?
+
+---
