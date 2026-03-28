@@ -1011,7 +1011,7 @@ Express handles it automatically with ETags
 ## 28 What is JS SDK means?
 - JS SDK - it means javascript software development kit.
 - Instea of using api we use sdk in js sdk means npm package/library.
-- See in example code.
+- See in example code Langchain js sdk.
 ```js
 // api call
 fetch("https://api.openai.com/v1/chat", { ... })
