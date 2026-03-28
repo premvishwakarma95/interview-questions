@@ -994,14 +994,16 @@ document.getElementById("btn").addEventListener("click", function () {
 ---
 
 ## 26 Why do we get 304 status in network tab in frontend if backend return response with 200?
-- If we will remove strict mode from react then it will give 200 status.
-- We get 304 Not Modified because of HTTP caching.
-- The browser asked the server “Has this data changed?”
-- The server replied “No, it’s the same as before.”
-- So the browser uses the cached response instead of downloading it again.
+Express handles it automatically with ETags
+- Browser calls GET /api/developer/stats with header If-None-Match: "abc123"
+- Server generates response, computes ETag → same "abc123"
+- Server says "nothing changed" → returns 304 with no body
+- Browser uses its stored copy
 
 ---
 
 ## 27 Explain Browser caching?
+- We will cache all the static images for one month or for one day so will not render again it will use that cache like js bundel file with bundel.3434js if we will make again build then it will make different build name so it will render new content not cache so it is called browser caching.
+- The above question is why we get 304 so this is browser caching. like browser identify nothing changed then send 304 status so all thing.
 
 ---
