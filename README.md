@@ -1007,3 +1007,18 @@ Express handles it automatically with ETags
 - The above question is why we get 304 so this is browser caching. like browser identify nothing changed then send 304 status so all thing.
 
 ---
+
+## 28 What is JS SDK means?
+- JS SDK - it means javascript software development kit.
+- Instea of using api we use sdk in js sdk means npm package/library.
+- See in example code.
+```js
+// api call
+fetch("https://api.openai.com/v1/chat", { ... })
+
+// Instead we use this
+import { ChatOpenAI } from "langchain";
+
+const model = new ChatOpenAI();
+const res = await model.invoke("Hello");
+```
