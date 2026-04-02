@@ -1022,3 +1022,9 @@ import { ChatOpenAI } from "langchain";
 const model = new ChatOpenAI();
 const res = await model.invoke("Hello");
 ```
+
+---
+
+## How to setup react with vite.
+- npm create vite@latest my-project
+- https://tailwindcss.com/docs/installation/using-vite
