@@ -7,6 +7,13 @@ https://roadmap.sh/questions/nodejs?fbclid=PAT01DUAQELJxleHRuA2FlbQIxMABzcnRjBmF
 
 ---
 
+## Learn about.
+- JWT method like what we use for auth.
+- mongodb pipeline, pagination.
+- bcrypt method.
+- always make one api before going to interview from scratch.
+- Implement in frontend.
+
 ## React Optimization steps
 - learn from below repo of mine
 - https://github.com/premvishwakarma95/react-optimization-steps
