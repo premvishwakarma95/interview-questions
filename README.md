@@ -38,7 +38,7 @@ undefined
 ---
 
 ## 2️⃣ What is Closure in JavaScript?
-A **closure** is a function that remembers variables from its **outer scope**, even after the outer function has finished execution.
+A **closure** is a function that remembers variables from its **outer scope**, even after the outer function has finished execution. Here Count is in lexical-scope.
 
 ```js
 function outer() {
