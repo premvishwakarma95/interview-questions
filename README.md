@@ -1106,4 +1106,14 @@ Promise.all([p1, p2, p3])
 // Output
 // ["A", "B", "C"]
 ```
+- romise.all() Failure Example
+```js
+const p1 = Promise.resolve("A");
+const p2 = Promise.reject("Error");
+const p3 = Promise.resolve("C");
 
+Promise.all([p1, p2, p3])
+  .catch(console.log);
+
+// Output - Error
+```
