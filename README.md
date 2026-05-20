@@ -1090,8 +1090,8 @@ promise
     console.log(result);
   });
 ```
-- 16. Promise.all()  
-Runs multiple promises together.
+- Promise.all()  
+Runs multiple promises together.  
 If ONE fails → all fail.
 ```js
 const p1 = Promise.resolve("A");
