@@ -1042,6 +1042,7 @@ const res = await model.invoke("Hello");
 - A Promise in JavaScript is used to handle asynchronous operations. It has three states (Pending, fulfilled, rejected).  
 - Example - API calls, Database query, file upload, Timers (settimeout) etc.
 - This solves the `callback hell` problem, before promises we used this callback hell and it's very hard to manage.
+- See callback hell code.
 ```js
 loginUser(function(user) {
   getPosts(user.id, function(posts) {
@@ -1051,3 +1052,17 @@ loginUser(function(user) {
   });
 });
 ```
+- Promise code
+```js
+const myPromise = new Promise((resolve, reject) => {
+  
+  let success = true;
+
+  if (success) {
+    resolve("Task completed");
+  } else {
+    reject("Task failed");
+  }
+});
+```
+
