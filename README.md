@@ -1073,4 +1073,37 @@ myPromise
     console.log(error);
   });
 ```
+- Chaining Promises
+```js
+const promise = new Promise((resolve) => {
+  resolve(2);
+});
+
+promise
+  .then((num) => {
+    return num * 2;
+  })
+  .then((num) => {
+    return num * 3;
+  })
+  .then((result) => {
+    console.log(result);
+  });
+```
+- 16. Promise.all()  
+Runs multiple promises together.
+If ONE fails → all fail.
+```js
+const p1 = Promise.resolve("A");
+const p2 = Promise.resolve("B");
+const p3 = Promise.resolve("C");
+
+Promise.all([p1, p2, p3])
+  .then((result) => {
+    console.log(result);
+  });
+
+// Output
+// ["A", "B", "C"]
+```
 
