@@ -1117,3 +1117,21 @@ Promise.all([p1, p2, p3])
 
 // Output - Error
 ```
+- Promise.allSettled()  
+Waits for all promises.  
+Never fails completely.
+```js
+Promise.allSettled([
+  Promise.resolve("Success"),
+  Promise.reject("Failed")
+])
+.then((result) => {
+  console.log(result);
+});
+
+// Output
+[
+  { status: 'fulfilled', value: 'Success' },
+  { status: 'rejected', reason: 'Failed' }
+]
+```
