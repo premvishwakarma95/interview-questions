@@ -1135,3 +1135,19 @@ Promise.allSettled([
   { status: 'rejected', reason: 'Failed' }
 ]
 ```
+- Promise.race()
+Whichever finishes first wins.
+```js
+const p1 = new Promise(resolve => {
+  setTimeout(() => resolve("First"), 1000);
+});
+
+const p2 = new Promise(resolve => {
+  setTimeout(() => resolve("Second"), 2000);
+});
+
+Promise.race([p1, p2])
+  .then(console.log);
+
+// Output - First
+```
