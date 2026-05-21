@@ -1151,3 +1151,16 @@ Promise.race([p1, p2])
 
 // Output - First
 ```
+- Promise.any()
+First successful promise wins.
+```js
+Promise.any([
+  Promise.reject("Error"),
+  Promise.resolve("Success"),
+  Promise.resolve("Another")
+])
+.then(console.log);
+
+Output - Success
+```
+
