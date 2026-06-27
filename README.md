@@ -5,6 +5,9 @@
 ## NodeJS 10 Interview Questions
 https://roadmap.sh/questions/nodejs?fbclid=PAT01DUAQELJxleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAacaHT4WABVVlH9lMGIQF_3nM6MJjC5lEvZ_sQoVWk4tJkAgeBEjMXVHs6m76Q_aem_YsUg6h-_tH4nnwMFzayqUw
 
+
+
+https://www.theboringeducation.com/interview-prep/javascript-interview-questions
 ---
 
 ## Learn about.
