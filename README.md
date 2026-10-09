@@ -1212,3 +1212,8 @@ setSearch(prev => e.target.value);
 - both will produce same result because functional update not using previous value.
 - Normal update: Directly passes the new value.
 - Functional update: Passes a function that receives the previous queued state and returns the new value.
+
+---
+
+## 33.  What steps would you follow to optimize a slow React application?
+- Profile → Identify bottlenecks → Optimize re-renders → Memoize components → Lazy load → Code splitting → Optimize API calls → Optimize state management → Virtualize large lists → Optimize assets → Measure again.
