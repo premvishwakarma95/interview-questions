@@ -1257,3 +1257,8 @@ console.log('H');
 - E
 
 ---
+
+## Explain the event loop. Is there any difference between the browser JavaScript event loop and Node.js event loop?
+- The Event Loop is a mechanism in JavaScript that allows asynchronous operations to execute without blocking the main JavaScript thread.
+- JavaScript executes one task at a time on a given thread, but the event loop coordinates callbacks, promises, timers, and other asynchronous operations.
+<img width="697" height="628" alt="image" src="https://github.com/user-attachments/assets/bad42d13-2314-4755-9d5e-05c8f38d5e32" />
