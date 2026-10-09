@@ -1187,3 +1187,15 @@ async function getData() {
 
 getData();
 ```
+
+## 31 What will be the final value of count?
+```js
+const handleClick = () => {
+  setCount(count + 1);
+  setCount(count + 1);
+  setCount(c => c + 1);
+};
+```
+- The final value of count will be 2, assuming the initial value is 0.
+- Both setCount(count + 1) calls use the same value (0), so both request 1.
+- Functional updater receives the latest queued state value, which is 1, and increments it to 2.
