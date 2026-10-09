@@ -1221,3 +1221,39 @@ setSearch(prev => e.target.value);
 
 ## 33.  What steps would you follow to optimize a slow React application?
 - Profile → Identify bottlenecks → Optimize re-renders → Memoize components → Lazy load → Code splitting → Optimize API calls → Optimize state management → Virtualize large lists → Optimize assets → Measure again.
+
+---
+
+## 34. What will be the output?
+```js
+async function one() {
+    console.log('A');
+    await Promise.resolve();
+    console.log('B');
+    return 'C';
+}
+async function two() {
+    console.log('D');
+    setTimeout(() => {
+        console.log('E');
+    }, 0);
+    return 'F';
+}
+async function main() {
+    console.log('G');
+    const result = await Promise.all([one(), two()]);
+    console.log(result);
+}
+main();
+console.log('H');
+```
+- Output
+- G
+- A
+- D
+- H
+- B
+- [C, F]
+- E
+
+---
