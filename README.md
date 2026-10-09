@@ -1188,6 +1188,8 @@ async function getData() {
 getData();
 ```
 
+---
+
 ## 31 What will be the final value of count?
 ```js
 const handleClick = () => {
@@ -1199,3 +1201,14 @@ const handleClick = () => {
 - The final value of count will be 2, assuming the initial value is 0.
 - Both setCount(count + 1) calls use the same value (0), so both request 1.
 - Functional updater receives the latest queued state value, which is 1, and increments it to 2.
+
+---
+
+## 32. What is the difference between these state updates and What prints it searchvalue exactly?
+```js
+setSearch(e.target.value);
+setSearch(prev => e.target.value);
+```
+- both will produce same result because functional update not using previous value.
+- Normal update: Directly passes the new value.
+- Functional update: Passes a function that receives the previous queued state and returns the new value.
