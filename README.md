@@ -1035,13 +1035,13 @@ const res = await model.invoke("Hello");
 
 ---
 
-## How to setup react with vite.
+## 29 How to setup react with vite.
 - npm create vite@latest my-project
 - https://tailwindcss.com/docs/installation/using-vite
 
 ---
 
-## Promises in JS.
+## 30 Promises in JS.
 - A Promise in JavaScript is used to handle asynchronous operations. It has three states (Pending, fulfilled, rejected).  
 - Example - API calls, Database query, file upload, Timers (settimeout) etc.
 - This solves the `callback hell` problem, before promises we used this callback hell and it's very hard to manage.
