@@ -1215,5 +1215,9 @@ setSearch(prev => e.target.value);
 
 ---
 
+
+
+---
+
 ## 33.  What steps would you follow to optimize a slow React application?
 - Profile → Identify bottlenecks → Optimize re-renders → Memoize components → Lazy load → Code splitting → Optimize API calls → Optimize state management → Virtualize large lists → Optimize assets → Measure again.
