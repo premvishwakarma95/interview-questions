@@ -1286,6 +1286,9 @@ User Action → React Frontend → HTTP Request (Fetch/Axios) → DNS Resolution
 <img width="846" height="632" alt="image" src="https://github.com/user-attachments/assets/723db1fd-b782-4ead-a1cb-23d7d83eac52" />
 <img width="733" height="770" alt="image" src="https://github.com/user-attachments/assets/b93a6f2f-c2ce-48c3-8c5a-c146f71b580f" />
 
+- "REST is a resource-based architectural style that typically uses multiple endpoints and HTTP methods like GET, POST, PUT, PATCH, and DELETE.
+- GraphQL is a query language for APIs that usually uses a single endpoint and allows clients to request exactly the fields they need.
+- REST is generally simpler and works well for standard CRUD operations, while GraphQL is useful for complex applications with flexible data requirements."
 
 
 
