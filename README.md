@@ -1262,3 +1262,8 @@ console.log('H');
 - The Event Loop is a mechanism in JavaScript that allows asynchronous operations to execute without blocking the main JavaScript thread.
 - JavaScript executes one task at a time on a given thread, but the event loop coordinates callbacks, promises, timers, and other asynchronous operations.
 <img width="697" height="628" alt="image" src="https://github.com/user-attachments/assets/bad42d13-2314-4755-9d5e-05c8f38d5e32" />
+- Call Stack: Executes synchronous JavaScript code.
+- Runtime APIs: Handle asynchronous operations such as timers and I/O.
+- Microtask Queue: Contains Promise callbacks and await continuations.
+- Task Queue: Contains callbacks such as setTimeout.
+- Event Loop: Coordinates when queued work can execute.
