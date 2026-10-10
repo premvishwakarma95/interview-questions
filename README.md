@@ -1269,3 +1269,12 @@ console.log('H');
 - Microtask Queue: Contains Promise callbacks and await continuations.
 - Task Queue: Contains callbacks such as setTimeout.
 - Event Loop: Coordinates when queued work can execute.
+
+---
+
+## 36 What is a REST API?
+- REST (Representational State Transfer) is an architectural style used to design APIs that allow communication between a client (frontend) and a server (backend) over HTTP.
+- A REST API allows the frontend to perform operations such as creating, reading, updating, and deleting data.
+
+### Flow of REST API.
+User Action → React Frontend → HTTP Request (Fetch/Axios) → DNS Resolution → HTTPS Connection → Nginx/Load Balancer → Express Server → Middleware (Authentication/Validation) → Route → Controller → Service (Business Logic) → Database Query (MongoDB) → Database Response → Service → Controller → HTTP Response (JSON + Status Code) → React Frontend → State Update → UI Re-render.
