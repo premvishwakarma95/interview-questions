@@ -1278,3 +1278,14 @@ console.log('H');
 
 ### Flow of REST API.
 User Action → React Frontend → HTTP Request (Fetch/Axios) → DNS Resolution → HTTPS Connection → Nginx/Load Balancer → Express Server → Middleware (Authentication/Validation) → Route → Controller → Service (Business Logic) → Database Query (MongoDB) → Database Response → Service → Controller → HTTP Response (JSON + Status Code) → React Frontend → State Update → UI Re-render.
+
+---
+
+## 37. What is the difference between REST and GraphQL?
+<img width="837" height="552" alt="image" src="https://github.com/user-attachments/assets/da9ad43a-1b2d-49cf-b2b0-b36a7a1bc39c" />
+<img width="846" height="632" alt="image" src="https://github.com/user-attachments/assets/723db1fd-b782-4ead-a1cb-23d7d83eac52" />
+<img width="733" height="770" alt="image" src="https://github.com/user-attachments/assets/b93a6f2f-c2ce-48c3-8c5a-c146f71b580f" />
+
+
+
+
